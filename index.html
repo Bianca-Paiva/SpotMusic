@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonte Nunito do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+    <!-- Fonte de Ícones (Font Awesome) -->
+    <script src="https://kit.fontawesome.com/bedeacc890.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <title>Bia - SpotMusic</title>
+</head>
+
+<body>
+    <!-- Estrutura principal da aplicação em tela cheia -->
+    <div class="app-shell">
+        <!-- Cabeçalho superior -->
+        <header class="top-bar">
+            <!-- Lado esquerdo: Logo, Início e Barra de pesquisa -->
+            <div class="header-left">
+                <div class="nav-logo">
+                    <i class="fa-brands fa-spotify"></i>
+                </div>
+
+                <button class="home-button" aria-label="Início">
+                    <i class="fa-solid fa-house"></i>
+                </button>
+
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="O que você quer ouvir?">
+                    <span class="search-divider" aria-hidden="true"></span>
+                    <button type="button" class="browse-button" aria-label="Explorar">
+                        <i class="fa-solid fa-window-restore"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Lado direito: Links institucionais, ações de conta e menu mobile -->
+            <div class="header-right">
+                <nav class="header-links">
+                    <a href="#">Premium</a>
+                    <a href="#">Suporte</a>
+                    <a href="#">Baixar</a>
+                </nav>
+
+                <span class="header-divider" aria-hidden="true"></span>
+
+                <div class="header-actions">
+                    <a href="#" class="install-link">
+                        <i class="fa-regular fa-circle-down"></i>
+                        <span>Instalar aplicativo</span>
+                    </a>
+                    <a href="#" class="signup-link">Inscrever-se</a>
+                    <button type="button" class="login-button">Entrar</button>
+                </div>
+
+                <!-- Menu recolhido para telas menores -->
+                <div class="mobile-menu-wrapper">
+                    <button type="button" class="menu-toggle-button" aria-label="Abrir menu" aria-expanded="false">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <div class="mobile-menu-dropdown">
+                        <a href="#">
+                            <span>Premium</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        <a href="#">
+                            <span>Suporte</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        <a href="#">
+                            <span>Baixar</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Área central: Sidebar fixa + Conteúdo principal rolável -->
+        <div class="container">
+            <!-- Barra lateral (Biblioteca) -->
+            <nav class="sidebar">
+
+                <div class="nav-library">
+                    <p>Sua Biblioteca</p>
+                    <button type="button" class="add-library-button"
+                        aria-label="Criar playlist ou adicionar à biblioteca">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+
+                <div class="nav-playlists">
+                    <h5>Crie sua primeira playlist</h5>
+                    <p>É fácil, vamos te ajudar.</p>
+                    <button>Criar playlist</button>
+                </div>
+
+                <div class="nav-podcasts">
+                    <h5>Que tal seguir um podcast novo?</h5>
+                    <p>Avisaremos você sobre novos episódios.</p>
+                    <button>Explore podcasts</button>
+                </div>
+
+                <div class="nav-footer">
+                    <a href="#">Legal</a>
+                    <a href="#">Segurança e Centro de privacidade</a>
+                    <a href="#">Política de privacidade</a>
+                    <a href="#">Cookies</a>
+                    <a href="#">Sobre anúncios</a>
+                    <a href="#">Acessibilidade</a>
+                </div>
+
+                <button class="nav-lang-button">
+                    <i class="fa-solid fa-globe"></i>
+                    Português do Brasil
+                </button>
+            </nav>
+
+            <!-- Conteúdo principal -->
+            <main>
+                <section class="content">
+
+                    <!-- Carrossel de artistas populares -->
+                    <div class="section-header">
+                        <h2>Artistas populares</h2>
+                        <button>Mostrar tudo</button>
+                    </div>
+                    <div class="carousel-wrapper">
+                        <button type="button" class="carousel-btn prev" aria-label="Artistas anteriores">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <div class="artists-grid">
+                            <!-- Inserção de dados com JS -->
+                        </div>
+                        <button type="button" class="carousel-btn next" aria-label="Próximos artistas">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Carrossel de álbuns populares -->
+                    <div class="section-header">
+                        <h2>Álbuns populares</h2>
+                        <button>Mostrar tudo</button>
+                    </div>
+                    <div class="carousel-wrapper">
+                        <button type="button" class="carousel-btn prev" aria-label="Álbuns anteriores">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <div class="albums-grid">
+                            <!-- Inserção de dados com JS -->
+                        </div>
+                        <button type="button" class="carousel-btn next" aria-label="Próximos álbuns">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+
+                </section>
+            </main>
+        </div>
+
+        <!-- Banner inferior de pré-visualização -->
+        <div class="banner">
+            <div class="banner-content">
+                <h2>Pré-visualização do Spotify</h2>
+                <p>Inscreva-se para curtir música ilimitada e podcasts só com alguns anúncios. Não precisa de cartão de
+                    crédito.</p>
+            </div>
+
+            <button>Inscreva-se grátis</button>
+        </div>
+    </div>
+</body>
+<script src="./script.js"></script>
+
+</html>
